@@ -20,16 +20,23 @@ public class HelloWorldController  {
     //应该有方法可以让其注入，待下次研究
     @Autowired
     Rank t;
+    @Autowired
+    t1 t1111;
     @RequestMapping("/hello")
     public String index(
-      //      @RequestBody JSONObject jsonParam
-      //      @ApiParam(name = "formatSqlBody") @RequestBody FormatSqlBody formatSqlBody
+           @RequestBody JSONObject jsonParam
+           //@ApiParam(name = "formatSqlBody") @RequestBody FormatSqlBody formatSqlBody
             ){
-        return t.get();
+        //return t.get();
     //      return   jsonParam.get("sqlType").toString();
      //   SqlType sqlType = SqlType.get(1);
-      //  return t1111.sqlFormat(jsonParam.get("sql").toString(), SqlType.get(Integer.valueOf(jsonParam.get("sqlType").toString())));
+        return t1111.sqlFormat(jsonParam.get("sql").toString(), SqlType.get(Integer.valueOf(jsonParam.get("sqlType").toString())));
         //return SQLUtils.format(jsonParam.get("sql").toString(),new SqlT, SQLUtils.DEFAULT_FORMAT_OPTION);
        // return sqlType.toString();
+    }
+
+    @RequestMapping("/redis")
+    public String redis() {
+        return t.get();
     }
 }

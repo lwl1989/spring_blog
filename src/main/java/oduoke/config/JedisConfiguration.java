@@ -7,11 +7,13 @@ import redis.clients.jedis.JedisPoolConfig;
 @Component
 public class JedisConfiguration extends JedisPoolConfig {
     @Value("${jedis.port}")
-    private Integer port;
+    private Integer port = 3306;
+
+    //注入的值会优先于默认值
     @Value("${jedis.host}")
-    private String host;
+    private String host = "localhost1";
     @Value("${jedis.max.timeout}")
-    private Integer timeout;
+    private Integer timeout = 3000;
 
     public JedisConfiguration(){}
 
