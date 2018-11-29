@@ -8,7 +8,6 @@ import redis.clients.jedis.JedisPoolConfig;
 public class JedisConfiguration extends JedisPoolConfig {
     @Value("${jedis.port}")
     private Integer port = 3306;
-
     //注入的值会优先于默认值
     @Value("${jedis.host}")
     private String host = "localhost1";
