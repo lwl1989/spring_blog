@@ -25,6 +25,8 @@ public class RedisController {
 
     @RequestMapping("/rank1")
     public String Test1() {
-        return JSON.toJSONString(t.getYesterday(5));
+
+       return JSON.toJSONString("{\"haha\":1}");
+       // return "{\"haha\":1}";   return JSON.toJSONString(t.getYesterday(5));
     }
 }

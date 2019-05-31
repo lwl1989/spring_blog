@@ -1,10 +1,7 @@
 package oduoke.controller;
 
-import com.alibaba.druid.sql.SQLUtils;
 import com.alibaba.fastjson.JSONObject;
-import io.swagger.annotations.ApiParam;
 import oduoke.emememe.SqlType;
-import oduoke.service.FormatSqlBody;
 import oduoke.star.Rank;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
