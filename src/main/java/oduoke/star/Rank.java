@@ -16,7 +16,7 @@ public class Rank {
     JedisPoolFactory factory;
     public String get()
     {
-        return getRedis().getResource().get("STAR_RANK_LIST:STAR_RANKTYPE_DATA:1287464960:3");
+        return getRedis().getResource().get("str_section_raise_pos_info_v2");
     }
 
     public List<Star> getRankList(Integer rankType)
