@@ -20,6 +20,18 @@
                 </includes>
             </resource>
         </resources>
+        <plugins>
+
+            <!--该模块在完整的打包环境下运行的时候会被禁用 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                </configuration>
+            </plugin>
+
+        </plugins>
     </build>
 
 
@@ -88,5 +100,15 @@
             <version>2.1.0</version>
         </dependency>
 
+        <!-- 热启动 -->
+        <dependency>
+
+            <groupId>org.springframework.boot</groupId>
+
+            <artifactId>spring-boot-devtools</artifactId>
+
+            <optional>true</optional>
+
+        </dependency>
     </dependencies>
 </project>
