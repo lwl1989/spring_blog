@@ -29,10 +29,10 @@ public interface UserMapper {
     })
     User getOne(Long id);
 
-    @Insert("INSERT INTO users(userName,age) VALUES(#{userName}, #{age})")
+    @Insert("INSERT INTO users(user_name,age) VALUES(#{userName}, #{age})")
     void insert(User user);
 
-    @Update("UPDATE users SET userName=#{userName},nick_name=#{nickName} WHERE id =#{id}")
+    @Update("UPDATE users SET user_name=#{userName},nick_name=#{nickName} WHERE id =#{id}")
     void update(User user);
 
     @Delete("DELETE FROM users WHERE id =#{id}")
