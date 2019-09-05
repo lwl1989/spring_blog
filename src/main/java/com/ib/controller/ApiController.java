@@ -1040,9 +1040,10 @@ public class ApiController implements EWrapper {
 	}
 
     public void reqRealTimeBars(Contract contract, WhatToShow whatToShow, boolean rthOnly, IRealTimeBarHandler handler) {
-		if (!checkConnection())
+		if (!checkConnection()) {
+			System.out.println("false");
 			return;
-
+		}
     	int reqId = m_reqId++;
     	m_realTimeBarMap.put( reqId, handler);
     	ArrayList<TagValue> realTimeBarsOptions = new ArrayList<TagValue>();

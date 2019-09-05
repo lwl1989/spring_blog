@@ -95,6 +95,9 @@ public class EClientSocket extends EClient implements EClientMsgSink  {
 	        eConnect(socket);
 	    }
 	    catch( Exception e) {
+			System.out.println(e);
+			System.out.println(m_host);
+			System.out.println(port);
 	    	eDisconnect();
 	        connectionError();
 	    }
